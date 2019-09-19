@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="danhmuc.model.phieugiahan" />
+	<import class="danhmuc.model.phieumuon" />
+	<import class="danhmuc.model.Sach" />
+	<import class="danhmuc.model.theloai" />
+	<class name="danhmuc.model.impl.phieugiahanImpl" table="phieugiahan">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ngaygiahan" type="org.hibernate.type.TimestampType" />
+		<property name="phieumuonId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="xacnhan" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="danhmuc.model.impl.phieumuonImpl" table="phieumuon">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sachId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ngaymuon" type="org.hibernate.type.TimestampType" />
+		<property name="ngaytra" type="org.hibernate.type.TimestampType" />
+		<property name="xacnhan" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="trangthai" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="soluong" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="giahan" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="lydo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="danhmuc.model.impl.SachImpl" table="sach">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="theloaiID" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="soluong" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nxb" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="tacgia" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="masach" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ke" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="tang" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="noidung" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="danhmuc.model.impl.theloaiImpl" table="theloai">
+		<cache usage="read-write" />
+		<id name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

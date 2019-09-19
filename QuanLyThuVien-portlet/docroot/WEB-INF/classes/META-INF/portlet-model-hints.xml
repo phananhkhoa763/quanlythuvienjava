@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="danhmuc.model.phieugiahan">
+		<field name="id" type="long" />
+		<field name="ngaygiahan" type="Date" />
+		<field name="phieumuonId" type="long" />
+		<field name="xacnhan" type="long" />
+	</model>
+	<model name="danhmuc.model.phieumuon">
+		<field name="id" type="long" />
+		<field name="userId" type="long" />
+		<field name="sachId" type="long" />
+		<field name="ngaymuon" type="Date" />
+		<field name="ngaytra" type="Date" />
+		<field name="xacnhan" type="long" />
+		<field name="trangthai" type="long" />
+		<field name="soluong" type="long" />
+		<field name="giahan" type="long" />
+		<field name="lydo" type="String" />
+	</model>
+	<model name="danhmuc.model.Sach">
+		<field name="id" type="long" />
+		<field name="name" type="String" />
+		<field name="theloaiID" type="long" />
+		<field name="soluong" type="long" />
+		<field name="nxb" type="String" />
+		<field name="tacgia" type="String" />
+		<field name="masach" type="String" />
+		<field name="ke" type="long" />
+		<field name="tang" type="long" />
+		<field name="noidung" type="String" />
+	</model>
+	<model name="danhmuc.model.theloai">
+		<field name="id" type="long" />
+		<field name="name" type="String" />
+	</model>
+</model-hints>

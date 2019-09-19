@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="danhmuc.service.phieugiahanLocalService" class="danhmuc.service.impl.phieugiahanLocalServiceImpl" />
+	<bean id="danhmuc.service.phieugiahanService" class="danhmuc.service.impl.phieugiahanServiceImpl" />
+	<bean id="danhmuc.service.persistence.phieugiahanPersistence" class="danhmuc.service.persistence.phieugiahanPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="quanlythuvienDataSource" />
+	</bean>
+	<bean id="danhmuc.service.phieumuonLocalService" class="danhmuc.service.impl.phieumuonLocalServiceImpl" />
+	<bean id="danhmuc.service.phieumuonService" class="danhmuc.service.impl.phieumuonServiceImpl" />
+	<bean id="danhmuc.service.persistence.phieumuonPersistence" class="danhmuc.service.persistence.phieumuonPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="quanlythuvienDataSource" />
+	</bean>
+	<bean id="danhmuc.service.SachLocalService" class="danhmuc.service.impl.SachLocalServiceImpl" />
+	<bean id="danhmuc.service.SachService" class="danhmuc.service.impl.SachServiceImpl" />
+	<bean id="danhmuc.service.persistence.SachPersistence" class="danhmuc.service.persistence.SachPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="quanlythuvienDataSource" />
+	</bean>
+	<bean id="danhmuc.service.theloaiLocalService" class="danhmuc.service.impl.theloaiLocalServiceImpl" />
+	<bean id="danhmuc.service.theloaiService" class="danhmuc.service.impl.theloaiServiceImpl" />
+	<bean id="danhmuc.service.persistence.theloaiPersistence" class="danhmuc.service.persistence.theloaiPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="quanlythuvienDataSource" />
+	</bean>
+</beans>

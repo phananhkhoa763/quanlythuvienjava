@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="danhmuc.model.impl.phieugiahanModelImpl">
+		<attributes>
+			<id name="id" />
+			<basic name="ngaygiahan">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="phieumuonId" />
+			<basic name="xacnhan" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="danhmuc.model.impl.phieumuonModelImpl">
+		<attributes>
+			<id name="id" />
+			<basic name="userId" />
+			<basic name="sachId" />
+			<basic name="ngaymuon">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ngaytra">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="xacnhan" />
+			<basic name="trangthai" />
+			<basic name="soluong" />
+			<basic name="giahan" />
+			<basic name="lydo" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="danhmuc.model.impl.SachModelImpl">
+		<attributes>
+			<id name="id" />
+			<basic name="name" />
+			<basic name="theloaiID" />
+			<basic name="soluong" />
+			<basic name="nxb" />
+			<basic name="tacgia" />
+			<basic name="masach" />
+			<basic name="ke" />
+			<basic name="tang" />
+			<basic name="noidung" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="danhmuc.model.impl.theloaiModelImpl">
+		<attributes>
+			<id name="id" />
+			<basic name="name" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="danhmuc.model.impl.phieugiahanImpl" name="phieugiahan">
+		<table name="phieugiahan" />
+		<attributes />
+	</entity>
+	<entity class="danhmuc.model.impl.phieumuonImpl" name="phieumuon">
+		<table name="phieumuon" />
+		<attributes />
+	</entity>
+	<entity class="danhmuc.model.impl.SachImpl" name="Sach">
+		<table name="sach" />
+		<attributes />
+	</entity>
+	<entity class="danhmuc.model.impl.theloaiImpl" name="theloai">
+		<table name="theloai" />
+		<attributes />
+	</entity>
+</entity-mappings>

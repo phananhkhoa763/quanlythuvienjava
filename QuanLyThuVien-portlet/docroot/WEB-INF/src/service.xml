@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="danhmuc">
+	<author>LAPTOP</author>
+	<namespace>QuanLyThuVien</namespace>
+	<entity local-service="true" name="Sach" table="sach" data-source="quanlythuvienDataSource">
+		<column name="id" db-name="id" primary="true" type="long" />
+		<column name="name" db-name="name" type="String" />
+		<column name="theloaiID" db-name="theloaiID" type="long" />
+		<column name="soluong" db-name="soluong" type="long" />
+		<column name="nxb" db-name="nxb" type="String" />
+		<column name="tacgia" db-name="tacgia" type="String" />
+		<column name="masach" db-name="masach" type="String" />
+		<column name="ke" db-name="ke" type="long" />
+		<column name="tang" db-name="tang" type="long" />
+		<column name="noidung" db-name="noidung" type="String" />
+	</entity>
+	<entity local-service="true" name="theloai" table="theloai" data-source="quanlythuvienDataSource">
+		<column name="id" db-name="id" primary="true" type="long"></column>
+		<column name="name" db-name="name" type="String"></column>
+	</entity>
+	<entity local-service="true" name="phieumuon" table="phieumuon" data-source="quanlythuvienDataSource">
+		<column name="id" db-name="id" primary="true" type="long"></column>
+		<column name="userId" db-name="userId" type="long"></column>
+		<column name="sachId" db-name="sachId" type="long"></column>
+		<column name="ngaymuon" db-name="ngaymuon" type="Date"></column>
+		<column name="ngaytra" db-name="ngaytra" type="Date"></column>
+		<column name="xacnhan" db-name="xacnhan" type="long"></column>
+		<column name="trangthai" db-name="trangthai" type="long"></column>
+		<column name="soluong" db-name="soluong" type="long"></column>
+		<column name="giahan" db-name="giahan" type="long"></column>
+		<column name="lydo" db-name="lydo" type="String"></column>
+	</entity>
+	<entity local-service="true" name="phieugiahan" table="phieugiahan" data-source="quanlythuvienDataSource">
+		<column name="id" db-name="id" primary="true" type="long"></column>
+		<column name="ngaygiahan" db-name="ngaygiahan" type="Date"></column>
+		<column name="phieumuonId" db-name="phieumuonId" type="long"></column>
+		<column name="xacnhan" db-name="xacnhan" type="long"></column>
+	</entity>
+</service-builder>
